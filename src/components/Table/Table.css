@@ -1,0 +1,11 @@
+table{
+    width: 95%;
+    margin: auto;
+    border: 1px solid black;
+}
+td{
+    height: 300px;
+}
+td:hover{
+    opacity: 20%;
+}
