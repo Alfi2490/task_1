@@ -1,0 +1,7 @@
+td{
+    height: 300px;
+    border: 2px solid white;
+}
+td:hover{
+    border: 2px solid black;
+}
