@@ -21,7 +21,7 @@ const slice = createSlice({
             state.dropSquare = payload
         },
         switchColor:(state,{payload}) => {
-
+            state.data = payload;
         },
     }
 });
