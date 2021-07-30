@@ -38,7 +38,22 @@ function Table() {
                 dt[i] = {color1:d[0],color2:d[1],color3:d[2]};
             };
             dispatch(switchColor(dt));
-        } 
+        }
+        if(drag.column !== drop.column && drag.row !== drop.row){
+            const tmp1 = dt[drag.row];
+            const tmp2 = dt[drop.row];
+            dt[drag.row] = tmp2;
+            dt[drop.row] = tmp1;
+            for(let i = 0; i < dt.length; i++){
+                const d = [dt[i].color1,dt[i].color2,dt[i].color3];
+                const tmp1 = d[drag.column];
+                const tmp2 = d[drop.column];
+                d[drag.column] = tmp2;
+                d[drop.column] = tmp1;
+                dt[i] = {color1:d[0],color2:d[1],color3:d[2]};
+            };
+            dispatch(switchColor(dt));
+        }
     }
 
     return <table 
