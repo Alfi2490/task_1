@@ -10,7 +10,7 @@ function Table() {
 
     const dispatch = useDispatch();
 
-    function enter(e){
+    function start(e){
         const row = e.target.parentElement.dataset.num;
         const column = e.target.dataset.num;
         const position = {row, column};
@@ -57,7 +57,7 @@ function Table() {
     }
 
     return <table 
-            onDragEnter={e => enter(e)}
+            onDragEnter={e => start(e)}
             onDragEnd={() => end()}>
         <tr>
             <th>Color 1</th>
